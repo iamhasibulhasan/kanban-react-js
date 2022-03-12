@@ -13,7 +13,6 @@ function App() {
         <a className='add-list-btn' href="#"><FontAwesomeIcon className='plus-icon' icon={faPlus} /> Add a list</a>
         <div className='d-flex mt-5 all-card'>
           <KCard></KCard>
-          <KCard></KCard>
         </div>
       </Container>
     </div>
