@@ -2,3 +2,11 @@
     color: black;
     font-size: 10px;
 }
+
+.card-title {
+    font-weight: 500;
+}
+
+.edit-icon {
+    color: black;
+    font-size: 14px;}
