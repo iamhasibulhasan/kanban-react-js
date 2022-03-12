@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import KCard from './components/card/KCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='kanban-main'>
+      <h2 className='title pt-2 pb-4'>Kanban Demo Project</h2>
+      <Container>
+        <a className='add-list-btn' href="#"><FontAwesomeIcon className='plus-icon' icon={faPlus} /> Add a list</a>
+        <div className='d-flex mt-5 all-card'>
+          <KCard></KCard>
+          <KCard></KCard>
+        </div>
+      </Container>
     </div>
   );
 }

@@ -1,38 +1,35 @@
-.App {
+.kanban-main {
+  font: 100% Courier New;
+  line-height: 26px;
+  background-color: #000000;
+  color: #84c754;
+  height: 100vh;
+}
+
+.title {
   text-align: center;
+  font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-list-btn {
+  text-decoration: none;
+  font-size: 1.2rem;
+  border: 1px solid rgba(204, 204, 204, 0.275);
+  border-radius: 5px;
+  padding: 10px;
+  color: #ccc;
+  transition: 0.5s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-list-btn:hover {
+  background-color: white;
+  color: #000000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.plus-icon {
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.all-card {
+  column-gap: 10px;
 }
