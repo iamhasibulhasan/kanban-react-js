@@ -15,21 +15,35 @@ const Task = (props) => {
     const handleHideEdit = (e) => {
         e.preventDefault();
         setShowEdit(false);
+    } 
+
+    // * Drag n Drop Function here
+
+
+
+    const drag = (ev) => {
+        ev.dataTransfer.setData("text", ev.target.id);
     }
+
+
+
+
     return (
         <div>
+            <div>
             {
                 showEdit ?
                     <form onSubmit={(e) => handleHideEdit(e)}>
-                        <input type="text" className="form-control mt-3" value={input} onInput={e => setInput(e.target.value)} />
+                            <input type="text" className="form-control" value={input || inputVal} onInput={e => setInput(e.target.value)} />
                     </form> :
-                    <p className='alert alert-primary d-flex justify-content-between' id={taskId}>
-                        <span className="text-alert">
-                            {input || inputVal}
-                        </span>
-                        <a onClick={(e) => handleShowEdit(e)} href="#" className='task-edit'><FontAwesomeIcon icon={faPencil} /></a>
-                    </p>
+                        <p className='alert alert-primary d-flex justify-content-between' id={Math.floor(Math.random() * 100)} draggable="true" onDragStart={(e) => drag(e)}>
+                            <span className="text-alert">
+                                {input || inputVal}
+                            </span>
+                            <a onClick={(e) => handleShowEdit(e)} href="#" className='task-edit'><FontAwesomeIcon icon={faPencil} /></a>
+                        </p>
             }
+        </div>
         </div>
     );
 };

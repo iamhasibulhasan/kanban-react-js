@@ -1,3 +1,7 @@
+#dragDiv {
+    height: auto;
+}
+
 .task-edit {
     color: black;
     font-size: 10px;
@@ -9,4 +13,5 @@
 
 .edit-icon {
     color: black;
-    font-size: 14px;}
+    font-size: 14px;
+}

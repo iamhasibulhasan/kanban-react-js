@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './KCard.css';
-import Editable from './../Editable/Editable';
 import EditableTask from '../EditableTask/EditableTask';
 import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

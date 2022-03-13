@@ -23,10 +23,26 @@ const EditableTask = () => {
     const addTask = (e) => {
         e.preventDefault();
         setTaskList(taskList.concat(<Task key={taskList.length} taskId={taskList.length} inputVal={input} />));
-        setInput('');
+        // setInput('');
+        // input = '';
     }
+
+
+    const allowDrop = (ev) => {
+        ev.preventDefault();
+    }
+
+
+
+    const drop = (ev) => {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+
+
     return (
-        <div className="card">
+        <div className="card full-card">
             <div className="card-body">
             <div className="todo-list">
                     {
@@ -41,7 +57,9 @@ const EditableTask = () => {
                             </div>
 
                     }
-                {taskList}
+                    <div id='dragDiv' onDrop={(e) => drop(e)} onDragOver={(e) => allowDrop(e)}>
+                        {taskList}
+                    </div><br />
                 <form onSubmit={(e) => addTask(e)}>
                     <input id='taskField' className='form-control mt-3 alert-block' type="text" placeholder='Task name' value={input} onInput={e => setInput(e.target.value)} />
                 </form>
