@@ -2,7 +2,7 @@
 
 ### Live Kanban :blush:
 ```
-https://example.com/
+https://kanban-react-iamhasibul.netlify.app/
 ```
 
 
